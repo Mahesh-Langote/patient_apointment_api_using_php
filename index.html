@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Appointment System API Documentation</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .endpoint {
+            margin-bottom: 20px;
+        }
+
+        .endpoint h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .endpoint p {
+            margin-bottom: 10px;
+        }
+
+        .code-example {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Patient Appointment System API Documentation</h1>
+
+    <!-- Doctor Listing Endpoint -->
+    <div class="endpoint">
+        <h2>Doctor Listing Endpoint</h2>
+        <p><strong>URL:</strong> http://yourdomain.com/api/doctors</p>
+        <p><strong>HTTP Method:</strong> GET</p>
+        <p><strong>Description:</strong> Retrieves a list of all doctors.</p>
+        <div class="code-example">
+            <p><strong>Usage:</strong></p>
+            <pre>
+curl -X GET http://yourdomain.com/api/doctors
+            </pre>
+        </div>
+    </div>
+
+    <!-- Doctor Detail Endpoint -->
+    <div class="endpoint">
+        <h2>Doctor Detail Endpoint</h2>
+        <p><strong>URL:</strong> http://yourdomain.com/api/doctors/{doctor_id}</p>
+        <p><strong>HTTP Method:</strong> GET</p>
+        <p><strong>Description:</strong> Retrieves details about a specific doctor based on their `doctor_id`.</p>
+        <div class="code-example">
+            <p><strong>Usage:</strong></p>
+            <pre>
+curl -X GET http://yourdomain.com/api/doctors/{doctor_id}
+            </pre>
+        </div>
+    </div>
+
+    <!-- Appointment Booking Endpoint -->
+    <div class="endpoint">
+        <h2>Appointment Booking Endpoint</h2>
+        <p><strong>URL:</strong> http://yourdomain.com/api/appointments</p>
+        <p><strong>HTTP Method:</strong> POST</p>
+        <p><strong>Description:</strong> Allows users to book a new appointment. Users need to send a JSON payload with
+            the doctor's ID, patient name, and appointment date.</p>
+        <div class="code-example">
+            <p><strong>Usage:</strong></p>
+            <pre>
+curl -X POST http://yourdomain.com/api/appointments -H "Content-Type: application/json" -d '{
+   "doctor_id": 1,
+   "patient_name": "John Doe",
+   "appointment_date": "2023-10-10"
+}'
+            </pre>
+        </div>
+    </div>
+
+    <div>
+        <h3>ScreenShots</h3>
+        <div><br><br>
+            <img src="img/img1.png" width="60%"> <br><br>
+            <img src="img/img2.png" width="60%"><br><br>
+            <img src="img/img3.png" width="60%"><br><br>
+        </div>
+    </div>
+</body>
+
+</html>
